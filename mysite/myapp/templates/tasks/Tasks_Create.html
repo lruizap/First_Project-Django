@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tasks_Create</title>
+</head>
+
+<body>
+
+  {% extends 'layouts/nav.html' %}
+
+  {% block content %}
+
+  <h1>Create a new Task</h1>
+
+  <form action="" method="POST">
+    {% csrf_token %}
+
+    <!-- Esto lo que hará será separarnos cada elemento del formulario -->
+    <!-- Dentro de una etiqueta, en este caso un 'div' -->
+    {{form.as_div}}
+
+    <button>
+      Save
+    </button>
+
+  </form>
+
+  {% endblock %}
+
+</body>
+
+</html>
